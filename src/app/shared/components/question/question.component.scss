@@ -1,0 +1,26 @@
+.question-container {
+    padding: 1rem;
+}
+
+.question-header {
+    font-size: 1.5em;
+}
+
+.answers-list-container {
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.answer-container {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.correct-answer {
+    background-color: green;
+    color: white;
+}

@@ -1,0 +1,17 @@
+<div class="question-container">
+    <div class="question-header">
+        {{ question.question }}
+    </div>
+    <div>
+        <div class="answers-list-container">
+            <div *ngFor="let answer of question.answers" (click)="emitAnswer(answer)">
+                <div 
+                    class="answer-container"
+                    [class.correct-answer]="answer === selectedAnswer?.answer"
+                >
+                    {{ answer }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

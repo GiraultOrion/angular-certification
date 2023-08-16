@@ -1,0 +1,15 @@
+<div class="question-list-container"> 
+    <angular-certification-question 
+        *ngFor="let question of questions$ | async" 
+        [question]="question"
+        [selectedAnswer]="answers$ | async | answerForQuestionPipe: question"
+        (select)="addOrUpdateAnswer(question.id, $event)"
+    ></angular-certification-question>
+</div>
+
+<div *ngIf="(answers$ | async) | displaySubmitAnswersButtonPipe: (questions$ | async)">
+    <h4>
+        Click here to submit answers
+    </h4>
+    <button id="submitBtn" type="button" (click)="submitAnswers()">Submit Answers</button>
+</div>

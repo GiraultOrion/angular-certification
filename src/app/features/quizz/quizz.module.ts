@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { QuizzComponent } from './quizz.component';
 import { RouterModule } from '@angular/router';
 import { quizzRoutes } from './quizz.routes';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularCertificationSharedModule } from 'src/app/shared/angular-certification-shared.module';
+import { QuizzConfigurationComponent } from './quizz-configuration/quizz-configuration';
+import { QuizzDisplayComponent } from './quizz-display/quizz-display.component';
 
 @NgModule({
-    declarations: [
-        QuizzComponent
-    ],
-    imports: [ 
-        CommonModule,
-        RouterModule.forChild(quizzRoutes)
-    ],
-    exports: [],
-    providers: [],
+  declarations: [
+    QuizzComponent,
+    QuizzConfigurationComponent,
+    QuizzDisplayComponent,
+  ],
+  imports: [
+    AngularCertificationSharedModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(quizzRoutes),
+  ],
+  exports: [],
+  providers: [],
 })
 export class QuizzModule {}
