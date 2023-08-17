@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
-import { QuizzComponent } from './quizz.component';
 import { RouterModule } from '@angular/router';
-import { quizzRoutes } from './quizz.routes';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AngularCertificationSharedModule } from 'src/app/shared/angular-certification-shared.module';
-import { QuizzConfigurationComponent } from './quizz-configuration/quizz-configuration';
-import { QuizzDisplayComponent } from './quizz-display/quizz-display.component';
+
+import { AngularCertificationSharedModule } from '@shared';
+
+import { QuizzComponent } from './quizz.component';
+import { QuizzConfigurationComponent, QuizzDisplayComponent } from './components';
+
+import { quizzRoutes } from './quizz.routes';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,6 @@ import { QuizzDisplayComponent } from './quizz-display/quizz-display.component';
     AngularCertificationSharedModule,
     ReactiveFormsModule,
     RouterModule.forChild(quizzRoutes),
-  ],
-  exports: [],
-  providers: [],
+  ]
 })
 export class QuizzModule {}

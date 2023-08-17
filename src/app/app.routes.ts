@@ -1,23 +1,25 @@
-import { Route } from '@angular/router';
-import { QUIZZ_ROUTE, RESULTS_ROUTE } from '@utils';
+import { Route, mapToCanActivate } from '@angular/router';
+import { AngularCertificationRoutes } from '@utils';
+import { ResultsGuard } from './shared/guards';
 
 export const appRoutes: Route[] = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: QUIZZ_ROUTE,
-  },
-  {
-    path: QUIZZ_ROUTE,
+    path: AngularCertificationRoutes.QUIZZ_ROUTE,
     loadChildren: () => import('@features/quizz').then((p) => p.QuizzModule),
   },
   {
-    path: RESULTS_ROUTE,
+    path: AngularCertificationRoutes.RESULTS_ROUTE,
     loadChildren: () =>
       import('@features/results').then((p) => p.ResultsModule),
+    canActivate: mapToCanActivate([ResultsGuard]),
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: AngularCertificationRoutes.QUIZZ_ROUTE,
   },
   {
     path: '**',
-    redirectTo: QUIZZ_ROUTE,
+    redirectTo: AngularCertificationRoutes.QUIZZ_ROUTE,
   },
 ];

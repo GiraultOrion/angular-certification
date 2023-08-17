@@ -1,1 +1,10 @@
-component RESULTS OK !
+<h3>Quizz results</h3>
+
+<div class="question-list-container"> 
+    <angular-certification-question 
+        *ngFor="let question of questions$ | async" 
+        [question]="question"
+        [selectedAnswer]="answers$ | async | answerForQuestionPipe: question"
+        [highlightCorrect]="true"
+    ></angular-certification-question>
+</div>

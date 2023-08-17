@@ -30,7 +30,8 @@
       "@features/results": ["src/app/features/results/index.ts"],
       "@utils": ["src/app/utils/index.ts"],
       "@models": ["src/app/models/index.ts"],
-      "@services": ["src/app/services/index.ts"]
+      "@services": ["src/app/services/index.ts"],
+      "@shared": ["src/app/shared/index.ts"]
     }
   },
   "angularCompilerOptions": {

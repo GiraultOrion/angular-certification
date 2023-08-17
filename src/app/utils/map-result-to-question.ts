@@ -1,4 +1,5 @@
 import { Question, ResultResponse } from "@models";
+import { shuffle } from "./shuffle-array";
 
 export function mapResultToQuestion(resultResponse: ResultResponse): Array<Question> {
     return resultResponse.results.map(
@@ -10,7 +11,7 @@ export function mapResultToQuestion(resultResponse: ResultResponse): Array<Quest
                 difficulty: result.difficulty,
                 question: result.question,
                 type: result.type,
-                answers: [...result.incorrect_answers, result.correct_answer]
+                answers: shuffle([...result.incorrect_answers, result.correct_answer])
             }
         }
     )

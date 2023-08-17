@@ -10,6 +10,7 @@ import { Answer, Question } from '@models';
 export class QuestionComponent implements OnInit {
   @Input() public question!: Question;
   @Input() public selectedAnswer: Answer | null = null;
+  @Input() public highlightCorrect: boolean = false;
 
   @Output() public select: EventEmitter<string> = new EventEmitter<string>();
 

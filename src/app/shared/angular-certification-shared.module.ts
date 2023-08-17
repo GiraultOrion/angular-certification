@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { QuestionComponent } from './components/question';
-import { AnswerForQuestionPipe, DisplaySubmitAnswersButtonPipe } from './pipes';
+import { AnswerForQuestionPipe, ClassForAnswerPipe, DisplaySubmitAnswersButtonPipe, SafeHtmlPipe } from './pipes';
+import { QuestionComponent } from './components';
 
 @NgModule({
   declarations: [
     QuestionComponent,
     AnswerForQuestionPipe,
     DisplaySubmitAnswersButtonPipe,
+    ClassForAnswerPipe,
+    SafeHtmlPipe,
   ],
   imports: [CommonModule],
   exports: [
@@ -15,6 +17,7 @@ import { AnswerForQuestionPipe, DisplaySubmitAnswersButtonPipe } from './pipes';
     QuestionComponent,
     AnswerForQuestionPipe,
     DisplaySubmitAnswersButtonPipe,
+    SafeHtmlPipe,
   ],
   providers: [],
 })

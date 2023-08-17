@@ -1,2 +1,4 @@
-export const QUIZZ_ROUTE: string = "quizz";
-export const RESULTS_ROUTE: string = "results";
+export enum AngularCertificationRoutes {
+    QUIZZ_ROUTE = "quizz",
+    RESULTS_ROUTE = "results"
+}

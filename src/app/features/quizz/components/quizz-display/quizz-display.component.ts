@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Answer, Question } from '@models';
 import { QuestionDataService } from '@services';
-import { RESULTS_ROUTE } from '@utils';
+import { AngularCertificationRoutes } from '@utils';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -25,6 +25,6 @@ export class QuizzDisplayComponent implements OnInit {
   }
 
   public submitAnswers(): void {
-    this.router.navigate([RESULTS_ROUTE]);
+    this.router.navigate([AngularCertificationRoutes.RESULTS_ROUTE]);
   }
 }
