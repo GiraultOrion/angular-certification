@@ -22,12 +22,22 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@config": ["src/config/index.ts"],
+      "@environments": ["src/environments"],
+      "@features/quizz": ["src/app/features/quizz/index.ts"],
+      "@features/results": ["src/app/features/results/index.ts"],
+      "@utils": ["src/app/utils/index.ts"],
+      "@models": ["src/app/models/index.ts"],
+      "@services": ["src/app/services/index.ts"],
+      "@shared": ["src/app/shared/index.ts"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
 }
