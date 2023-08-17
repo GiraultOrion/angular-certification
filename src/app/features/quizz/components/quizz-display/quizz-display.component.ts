@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'angular-certification-quizz-display',
   templateUrl: './quizz-display.component.html',
-  styleUrls: ['./quizz-display.component.scss'],
 })
 export class QuizzDisplayComponent implements OnInit {
   public readonly questions$: Observable<Array<Question>> =
