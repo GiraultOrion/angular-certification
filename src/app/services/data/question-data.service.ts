@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Answer, Question } from '@models';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { QuestionApiService } from '../api';
-import { mapResultToQuestion, mapToVoid, shuffle } from '@utils';
+import { mapResultToQuestion, mapToVoid } from '@utils';
 
 @Injectable({
   providedIn: 'root',
@@ -29,7 +29,7 @@ export class QuestionDataService {
       .getQuestionsByTriviaAndDifficulty(triviaId, difficulty)
       .pipe(
         tap((response) =>
-          this.questionsObs.next(shuffle(mapResultToQuestion(response)))
+          this.questionsObs.next(mapResultToQuestion(response))
         ),
         mapToVoid()
       );
