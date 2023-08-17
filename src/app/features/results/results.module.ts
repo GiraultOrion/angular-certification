@@ -7,14 +7,18 @@ import { AngularCertificationSharedModule } from '@shared';
 import { ResultsComponent } from './results.component';
 
 import { resultsRoutes } from './results.routes';
+import { ResultBackgroundByCountPipe, ResultsCounterComponent, ResultsHighlightComponent } from './components';
 
 @NgModule({
-    declarations: [
-        ResultsComponent
-    ],
-    imports: [ 
-        AngularCertificationSharedModule,
-        RouterModule.forChild(resultsRoutes)
-    ]
+  declarations: [
+    ResultsComponent,
+    ResultsHighlightComponent,
+    ResultsCounterComponent,
+    ResultBackgroundByCountPipe,
+  ],
+  imports: [
+    AngularCertificationSharedModule,
+    RouterModule.forChild(resultsRoutes),
+  ],
 })
 export class ResultsModule {}

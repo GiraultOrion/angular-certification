@@ -5,8 +5,9 @@
             <div *ngFor="let answer of question.answers" (click)="emitAnswer(answer)">
                 <div 
                     class="answer-container"
-                    [innerHTML]="answer | safeHtmlPipe"
+                    [class.clickable]="!highlightCorrect"
                     [class]="selectedAnswer?.answer | classForAnswerPipe: question: answer: highlightCorrect"
+                    [innerHTML]="answer | safeHtmlPipe"
                 ></div>
             </div>
         </div>

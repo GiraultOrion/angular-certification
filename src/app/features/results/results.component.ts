@@ -11,11 +11,6 @@ import { Observable } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ResultsComponent implements OnInit, OnDestroy {
-  public readonly questions$: Observable<Array<Question>> =
-    this.questionDataService.questions$;
-  public readonly answers$: Observable<Array<Answer>> =
-    this.questionDataService.answers$;
-
   constructor(
     private router: Router,
     private questionDataService: QuestionDataService
@@ -28,7 +23,5 @@ export class ResultsComponent implements OnInit, OnDestroy {
     this.questionDataService.resetAnswers();
   }
 
-  public goToQuizz(): void {
-    this.router.navigate([AngularCertificationRoutes.QUIZZ_ROUTE]);
-  }
+
 }

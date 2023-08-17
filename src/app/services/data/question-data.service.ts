@@ -48,6 +48,19 @@ export class QuestionDataService {
     this.answersObs.next(list);
   }
 
+  public getCorrectAnswersCount(): number {
+    let result: number = 0;
+    this.questionsObs.value.forEach((question) => {
+      const answer: Answer | undefined = this.answersObs.value.find(
+        (answer) => answer.questionId === question.id
+      );
+      if (answer && answer.answer === question.correctAnswer) {
+        result++;
+      }
+    });
+    return result;
+  }
+
   public resetAnswers(): void {
     this.answersObs.next([]);
   }

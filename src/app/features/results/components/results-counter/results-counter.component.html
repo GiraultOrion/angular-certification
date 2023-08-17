@@ -1,0 +1,6 @@
+<div 
+    class="result-count"
+    [style.background-color]="resultCount | resultBackgroundByCountPipe"
+>You scored {{ resultCount }} out of 5</div>
+
+<button type="button" (click)="goToQuizz()">Create a new quizz</button>
