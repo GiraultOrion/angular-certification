@@ -1,10 +1,10 @@
 <form [formGroup]="formGroup">
-    <select id="categorySelect" formControlName="trivia">
-        <option [value]="null">--</option>
+    <select id="categorySelect" style="margin-right: 0.5rem;" formControlName="trivia">
+        <option [value]="null" disabled>--</option>
         <option *ngFor="let trivia of trivias$ | async" [value]="trivia.id"> {{trivia.name}} </option>   
     </select>
-    <select id="difficultySelect" formControlName="difficulty">
-        <option [value]="null">--</option>
+    <select id="difficultySelect" style="margin-right: 1rem;" formControlName="difficulty">
+        <option [value]="null" disabled>--</option>
         <option *ngFor="let difficulty of difficulties" [value]="difficulty.code"> {{difficulty.label}} </option>   
     </select>
     <button id="createBtn" type="button" [disabled]="formGroup.invalid" (click)="createQuizz()">Create</button>

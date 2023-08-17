@@ -40,7 +40,7 @@ export class QuizzConfigurationComponent implements OnInit {
     this.questionDataService
       .fetchQuestions(
         this.formGroup.value.trivia ?? 0,
-        this.formGroup.value.difficulty ?? ''
+        this.formGroup.value.difficulty ?? ""
       )
       .subscribe();
   }
