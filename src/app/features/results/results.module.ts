@@ -6,7 +6,8 @@ import { AngularCertificationSharedModule } from '@shared';
 import { ResultsComponent } from './results.component';
 
 import { resultsRoutes } from './results.routes';
-import { ResultBackgroundByCountPipe, ResultsCounterComponent, ResultsHighlightComponent } from './components';
+import { ResultsCounterComponent, ResultsHighlightComponent } from './components';
+import { ResultBackgroundByCountPipe } from './pipes';
 
 @NgModule({
   declarations: [
