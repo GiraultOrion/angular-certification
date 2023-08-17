@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { QuestionDataService } from '@services';
 import { AngularCertificationRoutes } from '@utils';
 import { Observable, combineLatest, map, tap } from 'rxjs';

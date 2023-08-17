@@ -3,7 +3,7 @@ import { TriviaApiService } from '../api';
 import { Trivia } from '@models';
 
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { mapToVoid, shuffle } from '@utils';
+import { mapToVoid } from '@utils';
 import { QuestionDataService } from './question-data.service';
 
 @Injectable({

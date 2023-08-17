@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Answer } from '@models';
 import { QuestionDataService } from '@services';
 import { AngularCertificationRoutes } from '@utils';
-import { Observable, combineLatest, map } from 'rxjs';
 
 @Component({
   selector: 'angular-certification-results-counter',
